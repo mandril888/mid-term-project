@@ -1,0 +1,75 @@
+.navbar {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    
+    &__container {
+        @extend %container;
+        height: $header-mobile-height;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media (min-width: $screen-xs-max) {
+            height: $header-desktop-height;
+        }
+    }
+
+    &.active {
+        background: #f2f4fc;
+        box-shadow: 0 0 7px -3px black;
+    }
+
+    &__logo {
+        order: 1;
+    }
+    
+    &__menu {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+        
+        @media (min-width: $screen-xs-max) {
+            order: 2;
+            max-width: 300px;
+            margin-top: 0;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        li {
+            padding: 0 10px;
+        }
+
+        a {
+            font-size: 1.7rem;
+            color: $n-medium;
+            
+            &.active {
+                color: $p-default;
+            }
+        }
+    }
+    
+    &__contact {
+        order: 2;
+
+        @media (min-width: $screen-xs-max) {
+            order: 3;
+            max-width: 300px;
+        }
+        
+        a {
+            padding: 10px;
+            
+            @media (min-width: $screen-xs-max) {
+                padding: 15px 37px;
+            }
+        }
+    }
+}

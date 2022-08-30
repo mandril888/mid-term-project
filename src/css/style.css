@@ -53,6 +53,15 @@ table {
   box-sizing: border-box;
 }
 
+.navbar__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+* {
+  transition: all 0.3s ease-out;
+}
+
 html {
   font-size: 10px;
 }
@@ -61,6 +70,12 @@ body {
   background: #F2F4FC;
   font-family: "Roboto";
   color: #6B708D;
+  margin-top: 90px;
+}
+@media (min-width: 575px) {
+  body {
+    height: 68px;
+  }
 }
 
 h1, h2, h3, h4 {
@@ -86,6 +101,104 @@ h4 {
 
 p {
   font-size: 1.6rem;
+}
+
+a {
+  color: #072AC8;
+  text-decoration: none;
+}
+a:hover {
+  color: #A2D6F9;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  font-weight: 500;
+  font-size: 1.7rem;
+  padding: 15px 37px;
+  color: #6B708D;
+  display: inline-block;
+  text-align: center;
+}
+.btn--primary {
+  background-color: #072AC8;
+  color: white;
+}
+.btn--primary:hover {
+  background-color: #A2D6F9;
+  color: white;
+}
+
+.navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+.navbar__container {
+  height: 90px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 575px) {
+  .navbar__container {
+    height: 68px;
+  }
+}
+.navbar.active {
+  background: #f2f4fc;
+  box-shadow: 0 0 7px -3px black;
+}
+.navbar__logo {
+  order: 1;
+}
+.navbar__menu {
+  order: 3;
+  width: 100%;
+  margin-top: 10px;
+}
+@media (min-width: 575px) {
+  .navbar__menu {
+    order: 2;
+    max-width: 300px;
+    margin-top: 0;
+  }
+}
+.navbar__menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+.navbar__menu li {
+  padding: 0 10px;
+}
+.navbar__menu a {
+  font-size: 1.7rem;
+  color: #6B708D;
+}
+.navbar__menu a.active {
+  color: #072AC8;
+}
+.navbar__contact {
+  order: 2;
+}
+@media (min-width: 575px) {
+  .navbar__contact {
+    order: 3;
+    max-width: 300px;
+  }
+}
+.navbar__contact a {
+  padding: 10px;
+}
+@media (min-width: 575px) {
+  .navbar__contact a {
+    padding: 15px 37px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

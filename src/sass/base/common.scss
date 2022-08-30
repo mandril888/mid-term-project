@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+* {
+    transition: all .3s ease-out;
+}
+
 html {
     font-size: 10px;
 }
@@ -8,6 +12,11 @@ body {
     background: $n-light;
     font-family: "Roboto";
     color: $n-medium;
+    margin-top: 90px;
+
+    @media (min-width: $screen-xs-max) {
+        height: 68px;
+    }
 }
 
 h1, h2, h3, h4 {
@@ -33,4 +42,39 @@ h4 {
 
 p {
     font-size: 1.6rem;
+}
+
+a {
+    color: $p-default;
+    text-decoration: none;
+    
+    &:hover {
+        color: $p-hover;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+
+// buttons
+
+.btn {
+    font-weight: 500;
+    font-size: 1.7rem;
+    padding: 15px 37px;
+    color: $n-medium;
+    display: inline-block;
+    text-align: center;
+
+    &--primary {
+        background-color: $p-default;
+        color: white;
+        
+        &:hover {
+            background-color: $p-hover;
+            color: white;
+        }
+    }
 }
