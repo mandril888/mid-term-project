@@ -2,6 +2,7 @@
     top: 0;
     position: fixed;
     width: 100%;
+    z-index: 1;
     
     &__container {
         @extend %container;
@@ -12,7 +13,7 @@
         align-items: center;
         flex-wrap: wrap;
 
-        @media (min-width: $screen-xs-max) {
+        @media (min-width: $screen-sm) {
             height: $header-desktop-height;
         }
     }
@@ -31,7 +32,7 @@
         width: 100%;
         margin-top: 10px;
         
-        @media (min-width: $screen-xs-max) {
+        @media (min-width: $screen-sm) {
             order: 2;
             max-width: 300px;
             margin-top: 0;
@@ -59,7 +60,7 @@
     &__contact {
         order: 2;
 
-        @media (min-width: $screen-xs-max) {
+        @media (min-width: $screen-sm) {
             order: 3;
             max-width: 300px;
         }
@@ -67,9 +68,15 @@
         a {
             padding: 10px;
             
-            @media (min-width: $screen-xs-max) {
+            @media (min-width: $screen-sm) {
                 padding: 15px 37px;
             }
+        }
+    }
+
+    a {
+        &:hover {
+            opacity: .6;
         }
     }
 }

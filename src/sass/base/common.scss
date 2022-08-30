@@ -14,7 +14,7 @@ body {
     color: $n-medium;
     margin-top: 90px;
 
-    @media (min-width: $screen-xs-max) {
+    @media (min-width: $screen-sm) {
         height: 68px;
     }
 }
@@ -22,18 +22,36 @@ body {
 h1, h2, h3, h4 {
     color: $n-dark;
     font-weight: bold;
+    margin: 20px 0;
+    line-height: 5rem;
+    
+    @media (min-width: $screen-sm) {
+        line-height: 7rem;
+    }
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 4rem;
+    
+    @media (min-width: $screen-sm) {
+        font-size: 6rem;
+    }
 }
 
 h2 {
-    font-size: 5rem;
+    font-size: 3rem;
+    
+    @media (min-width: $screen-sm) {
+        font-size: 5rem;
+    }
 }
 
 h3 {
-    font-size: 4rem;
+    font-size: 2.6rem;
+    
+    @media (min-width: $screen-md) {
+        font-size: 4rem;
+    }
 }
 
 h4 {
@@ -42,6 +60,8 @@ h4 {
 
 p {
     font-size: 1.6rem;
+    margin: 5px 0;
+    line-height: 2.5rem;
 }
 
 a {
@@ -77,4 +97,11 @@ img {
             color: white;
         }
     }
+}
+
+
+// container
+
+.container {
+    @extend %container;
 }

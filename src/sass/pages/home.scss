@@ -1,0 +1,47 @@
+.header-home {
+    padding: 40px 0;
+    text-align: center;
+
+    @media (min-width: $screen-sm-max) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    &__hero-section {
+        position: relative;
+        margin-bottom: 50px;
+    }
+    
+    &__text-section {
+        
+        @media (min-width: $screen-sm-max) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+
+.hero-section {
+    &__card {
+        position: absolute;
+        max-width: 190px;
+    }
+
+    &__card1 {
+        top: 10px;
+        left: -30px;
+    }
+
+    &__card2 {
+        bottom: -70px;
+        right: -20px;
+    }
+}
+
+.text-section {
+    &__btns {
+        margin: 20px 0;
+    }
+}
