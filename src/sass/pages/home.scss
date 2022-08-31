@@ -1,20 +1,27 @@
 .header-home {
     padding: 40px 0;
     text-align: center;
-
-    @media (min-width: $screen-sm-max) {
+    
+    @media (min-width: $screen-md) {
         display: flex;
         flex-direction: row-reverse;
+        text-align: left;
     }
 
     &__hero-section {
         position: relative;
-        margin-bottom: 50px;
+        max-width: 400px;
+        margin: 0 auto 50px;
+        
+        @media (min-width: $screen-md) {
+            max-width: 100%;
+            margin-top: 50px;
+        }
     }
     
     &__text-section {
         
-        @media (min-width: $screen-sm-max) {
+        @media (min-width: $screen-md) {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -22,11 +29,14 @@
     }
 }
 
-
 .hero-section {
     &__card {
         position: absolute;
         max-width: 190px;
+        
+        @media (min-width: $screen-md-max) {
+            max-width: 240px;
+        }
     }
 
     &__card1 {

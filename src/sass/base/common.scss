@@ -20,39 +20,41 @@ h1, h2, h3, h4 {
     color: $n-dark;
     font-weight: bold;
     margin: 20px 0;
-    line-height: 5rem;
-    
-    @media (min-width: $screen-sm) {
-        line-height: 7rem;
-    }
 }
 
 h1 {
     font-size: 4rem;
+    line-height: 5rem;
     
     @media (min-width: $screen-sm) {
         font-size: 6rem;
+        line-height: 7rem;
     }
 }
 
 h2 {
     font-size: 3rem;
+    line-height: 4rem;
     
     @media (min-width: $screen-sm) {
         font-size: 5rem;
+        line-height: 6rem;
     }
 }
 
 h3 {
     font-size: 2.6rem;
+    line-height: 3rem;
     
     @media (min-width: $screen-md) {
         font-size: 4rem;
+        line-height: 5rem;
     }
 }
 
 h4 {
     font-size: 2.4rem;
+    line-height: 3rem;
 }
 
 p {
@@ -69,6 +71,13 @@ a {
     &:hover {
         color: $p-hover;
         transition: all .3s ease-out;
+    }
+}
+
+button {
+
+    &:hover {
+        cursor: pointer;
     }
 }
 
