@@ -3,6 +3,7 @@
     position: fixed;
     width: 100%;
     z-index: 1;
+    transition: all .3s ease-out;
     
     &__container {
         @extend %container;
@@ -21,6 +22,7 @@
     &.active {
         background: #f2f4fc;
         box-shadow: 0 0 7px -3px black;
+        transition: all .3s ease-out;
     }
 
     &__logo {
@@ -50,9 +52,11 @@
         a {
             font-size: 1.7rem;
             color: $n-medium;
+            transition: all .3s ease-out;
             
             &.active {
                 color: $p-default;
+                transition: all .3s ease-out;
             }
         }
     }
@@ -75,8 +79,11 @@
     }
 
     a {
+        transition: all .3s ease-out;
+        
         &:hover {
             opacity: .6;
+            transition: all .3s ease-out;
         }
     }
 }

@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-* {
-    transition: all .3s ease-out;
-}
 
 html {
     font-size: 10px;
@@ -13,9 +10,9 @@ body {
     font-family: "Roboto";
     color: $n-medium;
     margin-top: 90px;
-
+    
     @media (min-width: $screen-sm) {
-        height: 68px;
+        margin-top: 68px;
     }
 }
 
@@ -67,9 +64,11 @@ p {
 a {
     color: $p-default;
     text-decoration: none;
+    transition: all .3s ease-out;
     
     &:hover {
         color: $p-hover;
+        transition: all .3s ease-out;
     }
 }
 
@@ -87,14 +86,17 @@ img {
     color: $n-medium;
     display: inline-block;
     text-align: center;
+    transition: all .3s ease-out;
 
     &--primary {
         background-color: $p-default;
         color: white;
+        transition: all .3s ease-out;
         
         &:hover {
             background-color: $p-hover;
             color: white;
+            transition: all .3s ease-out;
         }
     }
 }
@@ -104,4 +106,13 @@ img {
 
 .container {
     @extend %container;
+}
+
+
+// helpers
+
+.br-text {
+    @media (min-width: $screen-md) {
+        display: block;
+    }
 }
