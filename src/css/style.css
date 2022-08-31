@@ -189,7 +189,7 @@ img {
     height: 68px;
   }
 }
-.navbar.active {
+.navbar.scrolled {
   background: #f2f4fc;
   box-shadow: 0 0 7px -3px black;
   transition: all 0.3s ease-out;

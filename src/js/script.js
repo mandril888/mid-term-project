@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // add class to an element if isn't on top
-    function addActiveClassNavbar(element, className) {
+    function addClassToElemNotOnTop(element, className) {
         let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollPosition) element.classList.add(className);
         else element.classList.remove(className);
     }
 
-    // add 'active' class to navbar on scroll
+    // add 'scrolled' class to navbar on scroll
     const navbar = document.querySelector('.navbar');
-    addActiveClassNavbar(navbar, 'active');
+    addClassToElemNotOnTop(navbar, 'scrolled');
     window.addEventListener('scroll', () => {
-        addActiveClassNavbar(navbar, 'active');
+        addClassToElemNotOnTop(navbar, 'scrolled');
     });
 
     // smooth scroll to an element
