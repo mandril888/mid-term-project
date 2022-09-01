@@ -421,7 +421,7 @@ img {
   background: #292E47 url("/src/assets/testimonial-section/orbit.png") no-repeat center;
   background-size: cover;
   margin: 100px 0;
-  padding: 30px 40px;
+  padding: 30px 20px;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -432,7 +432,7 @@ img {
 @media (min-width: 768px) {
   .testimonial__container {
     position: relative;
-    padding: 50px 150px;
+    padding: 50px 180px;
   }
 }
 .testimonial__container:after {
@@ -441,41 +441,14 @@ img {
   clear: both;
 }
 .testimonial__memoji {
-  max-width: 150px;
+  max-width: 130px;
   margin: 30px 0;
 }
 @media (min-width: 768px) {
   .testimonial__memoji {
-    margin: 0;
+    max-width: 150px;
+    margin: 0 !important;
     position: absolute;
-  }
-}
-.testimonial .memoji__left {
-  float: left;
-  margin-left: -30px;
-}
-@media (min-width: 768px) {
-  .testimonial .memoji__left {
-    left: 0;
-  }
-}
-.testimonial .memoji__right {
-  float: right;
-  margin-right: -30px;
-}
-@media (min-width: 768px) {
-  .testimonial .memoji__right {
-    right: 0;
-  }
-}
-@media (min-width: 768px) {
-  .testimonial .memoji__top {
-    top: 0;
-  }
-}
-@media (min-width: 768px) {
-  .testimonial .memoji__bottom {
-    bottom: 0;
   }
 }
 .testimonial__title {
@@ -500,6 +473,35 @@ img {
   margin: 0;
 }
 
+.memoji__left {
+  float: left;
+  margin-left: -40px;
+}
+@media (min-width: 768px) {
+  .memoji__left {
+    left: 0;
+  }
+}
+.memoji__right {
+  float: right;
+  margin-right: -40px;
+}
+@media (min-width: 768px) {
+  .memoji__right {
+    right: 0;
+  }
+}
+@media (min-width: 768px) {
+  .memoji__top {
+    top: 0;
+  }
+}
+@media (min-width: 768px) {
+  .memoji__bottom {
+    bottom: 0;
+  }
+}
+
 .client-block__img {
   grid-area: img;
   border-radius: 50%;
@@ -517,6 +519,47 @@ img {
   align-self: start;
   color: #F2F4FC;
   font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .services__container {
+    display: flex;
+    align-items: stretch;
+  }
+}
+
+.service-card {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto 30px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 30px 25px;
+}
+@media (min-width: 768px) {
+  .service-card:nth-child(2) {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+.service-card__icon-block {
+  width: 80px;
+  height: 80px;
+  background-color: #F2F4FC;
+  border-radius: 50%;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.service-card__title {
+  margin-bottom: 0;
+  font-size: 2.2rem;
+  line-height: 3rem;
+}
+.service-card__text {
+  margin-bottom: 40px;
+}
+.service-card__link {
+  font-size: 1.7rem;
 }
 
 /*# sourceMappingURL=style.css.map */
