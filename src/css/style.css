@@ -53,7 +53,7 @@ table {
   box-sizing: border-box;
 }
 
-.navbar__container, .container {
+.testimonial__container, .navbar__container, .container {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px;
@@ -178,7 +178,7 @@ img {
 }
 .navbar__container {
   height: 90px;
-  padding: 10px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -415,6 +415,108 @@ img {
 .logos img {
   filter: grayscale(100%);
   max-width: 120px;
+}
+
+.testimonial {
+  background: #292E47 url("/src/assets/testimonial-section/orbit.png") no-repeat center;
+  background-size: cover;
+  margin: 100px 0;
+  padding: 30px 40px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .testimonial {
+    padding: 90px 40px;
+  }
+}
+@media (min-width: 768px) {
+  .testimonial__container {
+    position: relative;
+    padding: 50px 150px;
+  }
+}
+.testimonial__container:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.testimonial__memoji {
+  max-width: 150px;
+  margin: 30px 0;
+}
+@media (min-width: 768px) {
+  .testimonial__memoji {
+    margin: 0;
+    position: absolute;
+  }
+}
+.testimonial .memoji__left {
+  float: left;
+  margin-left: -30px;
+}
+@media (min-width: 768px) {
+  .testimonial .memoji__left {
+    left: 0;
+  }
+}
+.testimonial .memoji__right {
+  float: right;
+  margin-right: -30px;
+}
+@media (min-width: 768px) {
+  .testimonial .memoji__right {
+    right: 0;
+  }
+}
+@media (min-width: 768px) {
+  .testimonial .memoji__top {
+    top: 0;
+  }
+}
+@media (min-width: 768px) {
+  .testimonial .memoji__bottom {
+    bottom: 0;
+  }
+}
+.testimonial__title {
+  color: #F2F4FC;
+  clear: both;
+}
+.testimonial__text {
+  color: #FFC600;
+  max-width: 600px;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  margin: 80px auto;
+}
+.testimonial__client-block {
+  display: grid;
+  grid-template-areas: "img ." "img .";
+  max-width: 400px;
+  margin: 0 auto 30px;
+  text-align: left;
+}
+.testimonial__client-block p {
+  margin: 0;
+}
+
+.client-block__img {
+  grid-area: img;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  margin-right: 10px;
+  object-fit: cover;
+  justify-self: end;
+}
+.client-block__name {
+  align-self: end;
+  color: #A2D6F9;
+}
+.client-block__company {
+  align-self: start;
+  color: #F2F4FC;
+  font-size: 1.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
