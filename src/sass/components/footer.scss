@@ -1,0 +1,53 @@
+.footer {
+    @extend %container;
+    margin-top: 100px;
+    margin-bottom: 70px;
+
+    @media (min-width: $screen-md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    > div {
+        @media (min-width: $screen-md) {
+            align-self: center;
+        }
+    }
+
+    &__info {
+        > * {
+            margin-bottom: 30px;
+            
+            &:last-child {
+                @media (min-width: $screen-md) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        max-width: 100px;
+        display: block;
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 50px;
+        column-gap: 10px;
+        
+        @media (min-width: $screen-md) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        a {
+            color: $n-medium;
+            display: block;
+
+            &:hover {
+                color: $p-hover;
+            }
+        }
+    }
+}

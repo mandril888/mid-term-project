@@ -17,6 +17,13 @@
         @media (min-width: $screen-sm) {
             height: $header-desktop-height;
         }
+        
+        > * {
+            
+            @media (min-width: $screen-sm) {
+                width: 31%;
+            }
+        }
     }
 
     &.scrolled {
@@ -27,6 +34,10 @@
 
     &__logo {
         order: 1;
+
+        img {
+            max-width: 62px;
+        }
     }
     
     &__menu {
@@ -36,6 +47,7 @@
         
         @media (min-width: $screen-sm) {
             order: 2;
+            width: 31%;
             max-width: 300px;
             margin-top: 0;
         }
@@ -50,7 +62,6 @@
         }
 
         a {
-            font-size: 1.7rem;
             color: $n-medium;
             transition: all .3s ease-out;
             
@@ -65,6 +76,7 @@
         order: 2;
 
         @media (min-width: $screen-sm) {
+            text-align: right;
             order: 3;
             max-width: 300px;
         }
