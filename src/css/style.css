@@ -59,6 +59,14 @@ table {
   padding: 0 20px;
 }
 
+@keyframes appear-element {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 html {
   font-size: 10px;
 }
@@ -158,6 +166,7 @@ button:hover {
 
 input,
 textarea {
+  font-family: "Roboto";
   font-size: 1.7rem;
   width: 100%;
   border: none;
@@ -187,6 +196,34 @@ textarea {
   .br-text {
     display: block;
   }
+}
+
+.hide {
+  display: none;
+}
+
+.appear {
+  animation: appear-element 2s;
+}
+
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
 }
 
 .navbar {
@@ -642,11 +679,11 @@ textarea {
   }
 }
 .contact__block {
-  margin: 15px 0;
+  margin: 20px 0;
 }
 @media (min-width: 576px) {
   .contact__block {
-    margin: 30px 0;
+    margin: 40px 0;
   }
 }
 @media (min-width: 576px) {
@@ -666,7 +703,7 @@ textarea {
 .contact input,
 .contact textarea {
   background-color: rgba(107, 112, 141, 0.1);
-  margin: 15px 0;
+  margin-top: 15px;
   padding: 20px;
 }
 .contact input {

@@ -39,23 +39,27 @@
             <form action="post" class="contact__form">
                 <div class="contact__block">
                     <label for="name">Full Name *</label>
-                    <input type="text" id="name" placeholder="Enter your full name" required>
+                    <input type="text" id="name" class="required" placeholder="Enter your full name" required>
+                    <p class="error alert alert-danger hide"></p>
                 </div>
                 <div class="contact__block contact__block--2cols">
                     <div class="contact__block">
                         <label for="email">Email *</label>
-                        <input type="email" id="email" placeholder="Enter your email address" required>
+                        <input type="email" id="email" class="required" placeholder="Enter your email address" required>
+                        <p class="error alert alert-danger hide"></p>
                     </div>
                     <div class="contact__block">
                         <label for="phone">Phone *</label>
-                        <input type="text" id="phone" placeholder="Enter your phone number" required>
+                        <input type="tel" id="phone" class="required" placeholder="Enter your phone number" required>
+                        <p class="error alert alert-danger hide"></p>
                     </div>
                 </div>
                 <div class="contact__block">
-                    <label for="message">Message</label>
-                    <textarea type="text" id="message" placeholder="Write your message here ...." required></textarea>
+                    <label for="message">Message *</label>
+                    <textarea type="text" id="message" class="required" placeholder="Write your message here ...." required></textarea>
+                    <p class="error alert alert-danger hide"></p>
                 </div>
-                <button type="submit" class="btn btn--primary">Submit</button>
+                <button id="contact__submit" type="submit" class="btn btn--primary">Submit</button>
             </form>
         </section>
     </div>
