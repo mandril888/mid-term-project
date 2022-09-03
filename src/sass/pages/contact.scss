@@ -1,11 +1,10 @@
 .contact {
-    margin: 250px 0 200px;
 
     &__title {
-        margin: 40px 0;
+        margin-bottom: 40px;
         
         @media (min-width: $screen-sm) {
-            margin: 60px 0;
+            margin-bottom: 60px;
         }
     }
 

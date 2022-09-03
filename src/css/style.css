@@ -76,11 +76,11 @@ body {
   font-family: "Roboto";
   font-size: 1.7rem;
   color: #6B708D;
-  margin-top: clac(118px);
+  margin-top: 168px;
 }
 @media (min-width: 576px) {
   body {
-    margin-top: 140px;
+    margin-top: 210px;
   }
 }
 
@@ -230,9 +230,14 @@ textarea {
   top: 0;
   position: fixed;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 30px;
   z-index: 1;
   transition: all 0.3s ease-out;
+}
+@media (min-width: 576px) {
+  .navbar {
+    margin-top: 50px;
+  }
 }
 .navbar__container {
   height: 90px;
@@ -360,7 +365,6 @@ textarea {
 
 .newsletter {
   padding: 50px 20px;
-  margin: 50px 0;
   background-color: #FFC600;
   text-align: center;
 }
@@ -418,6 +422,7 @@ textarea {
 }
 @media (min-width: 769px) {
   .footer {
+    margin-top: 200px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -459,7 +464,6 @@ textarea {
 }
 
 .header-home {
-  padding: 40px 0;
   text-align: center;
 }
 @media (min-width: 769px) {
@@ -477,7 +481,7 @@ textarea {
 @media (min-width: 769px) {
   .header-home__hero-section {
     max-width: 100%;
-    margin-top: 50px;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 769px) {
@@ -517,7 +521,6 @@ textarea {
   .logos {
     display: flex;
     justify-content: space-between;
-    margin: 70px 0 100px;
   }
 }
 .logos img {
@@ -528,7 +531,6 @@ textarea {
 .testimonial {
   background: #292E47 url("/src/assets/testimonial-section/orbit.png") no-repeat center;
   background-size: cover;
-  margin: 100px 0;
   padding: 30px 20px;
   text-align: center;
 }
@@ -667,15 +669,12 @@ textarea {
   margin-bottom: 40px;
 }
 
-.contact {
-  margin: 250px 0 200px;
-}
 .contact__title {
-  margin: 40px 0;
+  margin-bottom: 40px;
 }
 @media (min-width: 576px) {
   .contact__title {
-    margin: 60px 0;
+    margin-bottom: 60px;
   }
 }
 .contact__block {

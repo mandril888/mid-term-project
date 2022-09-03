@@ -10,10 +10,10 @@ body {
     font-family: "Roboto";
     font-size: 1.7rem;
     color: $n-medium;
-    margin-top: clac($header-desktop-height + 50px);
+    margin-top: calc($header-desktop-height + 100px);
     
     @media (min-width: $screen-sm) {
-        margin-top: calc($header-mobile-height + 50px);
+        margin-top: calc($header-mobile-height + 120px);
     }
 }
 

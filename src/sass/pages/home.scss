@@ -1,5 +1,4 @@
 .header-home {
-    padding: 40px 0;
     text-align: center;
     
     @media (min-width: $screen-md) {
@@ -15,7 +14,7 @@
         
         @media (min-width: $screen-md) {
             max-width: 100%;
-            margin-top: 50px;
+            margin-bottom: 0;
         }
     }
     
@@ -62,7 +61,6 @@
     @media (min-width: $screen-md) {
         display: flex;
         justify-content: space-between;
-        margin: 70px 0 100px;
     }
 
     img {
@@ -74,7 +72,6 @@
 .testimonial {
     background: $n-dark url('/src/assets/testimonial-section/orbit.png') no-repeat center;
     background-size: cover;
-    margin: 100px 0;
     padding: 30px 20px;
     text-align: center;
     

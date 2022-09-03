@@ -2,9 +2,13 @@
     top: 0;
     position: fixed;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 30px;
     z-index: 1;
     transition: all .3s ease-out;
+    
+    @media (min-width: $screen-sm) {
+        margin-top: 50px;
+    }
     
     &__container {
         @extend %container;
