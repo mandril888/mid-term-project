@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Circle</title>
+    <link rel="icon" type="image/x-icon" href="/src/assets/logos/favicon.ico" />
+    <link rel="stylesheet" href="/src/css/style.css"></link>
+  </head>
+  <body>
+    <div class="navbar">
+        <div class="navbar__container">
+            <div class="navbar__logo">
+                <a href="/">
+                    <img src="/src/assets/logos/circle.svg" alt="Circle">
+                </a>
+            </div>
+            <nav class="navbar__menu">
+                <ul>
+                    <li>
+                        <a href="/" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="/#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="/#services">Services</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="navbar__contact">
+                <a href="/contact.html" class="btn btn--primary">Contact us</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <section class="contact">
+            <h1 class="contact__title">Contact Us</h1>
+            <form action="post" class="contact__form">
+                <div class="contact__block">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="contact__block contact__block--2cols">
+                    <div class="contact__block">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="contact__block">
+                        <label for="phone">Phone *</label>
+                        <input type="text" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                </div>
+                <div class="contact__block">
+                    <label for="message">Message</label>
+                    <textarea type="text" id="message" placeholder="Write your message here ...." required></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary">Submit</button>
+            </form>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer__info">
+            <div class="footer__logo">
+                <a href="/">
+                    <img src="/src/assets/logos/circle.svg" alt="Circle">
+                </a>
+            </div>
+            <p class="footer__street">2972 Westheimer Rd. Santa Ana,<br>Illinois 85486</p>
+        </div>
+        <div class="footer__links">
+            <a href="#">Team</a>
+            <a href="#">Services</a>
+            <a href="#">About Us</a>
+            <a href="#">Press</a>
+            <a href="#">Projects</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+    <script src="/src/js/script.js"></script>
+    <script src="/src/js/contact.js"></script>
+  </body>
+</html>

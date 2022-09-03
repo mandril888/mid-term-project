@@ -16,13 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // smooth scroll to an element
     function scrollIntoViewWithOffset(element, offset) {
-        window.scrollTo({
-            behavior: 'smooth',
-            top:
-                document.querySelector(element).getBoundingClientRect().top -
-                document.body.getBoundingClientRect().top -
-                offset,
-        })
+        if(document.querySelector(element)) {
+            window.scrollTo({
+                behavior: 'smooth',
+                top:
+                    document.querySelector(element).getBoundingClientRect().top -
+                    document.body.getBoundingClientRect().top -
+                    offset,
+            });
+        }
     }
 
     // smoth sroll on click # anchor

@@ -2,6 +2,7 @@
     top: 0;
     position: fixed;
     width: 100%;
+    margin-top: 50px;
     z-index: 1;
     transition: all .3s ease-out;
     
@@ -30,6 +31,7 @@
         background: #f2f4fc;
         box-shadow: 0 0 7px -3px black;
         transition: all .3s ease-out;
+        margin-top: 0;
     }
 
     &__logo {

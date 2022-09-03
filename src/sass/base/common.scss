@@ -10,10 +10,10 @@ body {
     font-family: "Roboto";
     font-size: 1.7rem;
     color: $n-medium;
-    margin-top: 90px;
+    margin-top: clac($header-desktop-height + 50px);
     
     @media (min-width: $screen-sm) {
-        margin-top: 68px;
+        margin-top: calc($header-mobile-height + 50px);
     }
 }
 
@@ -83,16 +83,25 @@ a {
     }
 }
 
+img {
+    width: 100%;
+}
+
 button {
+    border: none;
 
     &:hover {
         cursor: pointer;
     }
 }
 
-img {
+input,
+textarea {
+    font-size: 1.7rem;
     width: 100%;
+    border: none;
 }
+
 
 
 // buttons

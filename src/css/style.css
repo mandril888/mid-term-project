@@ -68,11 +68,11 @@ body {
   font-family: "Roboto";
   font-size: 1.7rem;
   color: #6B708D;
-  margin-top: 90px;
+  margin-top: clac(118px);
 }
 @media (min-width: 576px) {
   body {
-    margin-top: 68px;
+    margin-top: 140px;
   }
 }
 
@@ -145,12 +145,22 @@ a:hover {
   transition: all 0.3s ease-out;
 }
 
+img {
+  width: 100%;
+}
+
+button {
+  border: none;
+}
 button:hover {
   cursor: pointer;
 }
 
-img {
+input,
+textarea {
+  font-size: 1.7rem;
   width: 100%;
+  border: none;
 }
 
 .btn {
@@ -183,6 +193,7 @@ img {
   top: 0;
   position: fixed;
   width: 100%;
+  margin-top: 50px;
   z-index: 1;
   transition: all 0.3s ease-out;
 }
@@ -208,6 +219,7 @@ img {
   background: #f2f4fc;
   box-shadow: 0 0 7px -3px black;
   transition: all 0.3s ease-out;
+  margin-top: 0;
 }
 .navbar__logo {
   order: 1;
@@ -336,9 +348,7 @@ img {
 }
 .newsletter__form > * {
   display: block;
-  width: 100%;
   height: 60px;
-  border: none;
   margin: 10px 0;
 }
 @media (min-width: 576px) {
@@ -348,7 +358,6 @@ img {
   }
 }
 .newsletter__form input[type=email] {
-  font-size: 1.7rem;
   padding: 0 10px 0 50px;
   background: white url("/src/assets/newsletter/icon/mail.svg") no-repeat 12px center;
 }
@@ -619,6 +628,56 @@ img {
 }
 .service-card__text {
   margin-bottom: 40px;
+}
+
+.contact {
+  margin: 250px 0 200px;
+}
+.contact__title {
+  margin: 40px 0;
+}
+@media (min-width: 576px) {
+  .contact__title {
+    margin: 60px 0;
+  }
+}
+.contact__block {
+  margin: 15px 0;
+}
+@media (min-width: 576px) {
+  .contact__block {
+    margin: 30px 0;
+  }
+}
+@media (min-width: 576px) {
+  .contact__block--2cols {
+    columns: 2;
+  }
+}
+@media (min-width: 576px) {
+  .contact__block--2cols .contact__block {
+    margin: 0;
+  }
+}
+.contact label {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.contact input,
+.contact textarea {
+  background-color: rgba(107, 112, 141, 0.1);
+  margin: 15px 0;
+  padding: 20px;
+}
+.contact input {
+  height: 70px;
+}
+.contact textarea {
+  height: 200px;
+}
+.contact button {
+  width: 100%;
+  height: 80px;
 }
 
 /*# sourceMappingURL=style.css.map */
