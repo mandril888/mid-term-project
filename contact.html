@@ -40,27 +40,31 @@
                 <div class="contact__block">
                     <label for="name">Full Name *</label>
                     <input type="text" id="name" class="required" placeholder="Enter your full name" required>
-                    <p class="error alert alert-danger hide"></p>
+                    <p class="alert alert-danger hide"></p>
                 </div>
                 <div class="contact__block contact__block--2cols">
                     <div class="contact__block">
                         <label for="email">Email *</label>
                         <input type="email" id="email" class="required" placeholder="Enter your email address" required>
-                        <p class="error alert alert-danger hide"></p>
+                        <p class="alert alert-danger hide"></p>
                     </div>
                     <div class="contact__block">
                         <label for="phone">Phone *</label>
                         <input type="tel" id="phone" class="required" placeholder="Enter your phone number" required>
-                        <p class="error alert alert-danger hide"></p>
+                        <p class="alert alert-danger hide"></p>
                     </div>
                 </div>
                 <div class="contact__block">
                     <label for="message">Message *</label>
                     <textarea type="text" id="message" class="required" placeholder="Write your message here ...." required></textarea>
-                    <p class="error alert alert-danger hide"></p>
+                    <p class="alert alert-danger hide"></p>
                 </div>
                 <button id="contact__submit" type="submit" class="btn btn--primary">Submit</button>
             </form>
+            <div class="contact__info">
+                <p class="alert alert-success hide contact__sent">Congratulations, form sent successfully! &#128512;</p>
+                <p class="alert alert-danger hide contact__error">We are sorry, but there has been an error. Try again later &#128542;</p>
+            </div>
         </section>
     </div>
     <footer class="footer">
