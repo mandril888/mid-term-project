@@ -13,12 +13,19 @@
     margin: 0 auto 30px;
     background: white;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: all .3s ease-out;
 
     &:nth-child(2) {
         @media (min-width: $screen-md) {
             margin-left: 30px;
             margin-right: 30px;
         }
+    }
+
+    &:hover {
+        box-shadow: rgb(0 0 0 / 15%) 1.95px 9.95px 10.6px;
+        transform: translateY(-6px);
+        transition: all .3s ease-out;
     }
 
     &__container {
