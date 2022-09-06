@@ -410,6 +410,9 @@ textarea {
     max-width: 400px;
   }
 }
+.newsletter__form button {
+  width: 100%;
+}
 @media (min-width: 576px) {
   .newsletter__form button {
     max-width: 200px;

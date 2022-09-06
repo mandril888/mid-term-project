@@ -48,7 +48,8 @@
         }
         
         button {
-            
+            width: 100%;
+
             @media (min-width: $screen-sm) {
                 max-width: 200px;
             }
