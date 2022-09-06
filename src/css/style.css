@@ -95,6 +95,22 @@ table {
     transform: rotate(-360deg);
   }
 }
+@keyframes move-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: scale(1.1) translateY(-15px);
+  }
+}
+@keyframes move-down-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: scale(1.1) translateY(15px);
+  }
+}
 html {
   font-size: 10px;
 }
@@ -516,6 +532,12 @@ textarea {
     max-width: 100%;
     margin-bottom: 0;
   }
+}
+.header-home__hero-section.hero-animation .hero-section__card1 {
+  animation: move-up-down 2s ease infinite;
+}
+.header-home__hero-section.hero-animation .hero-section__card2 {
+  animation: move-down-up 2s ease infinite;
 }
 @media (min-width: 769px) {
   .header-home__text-section {

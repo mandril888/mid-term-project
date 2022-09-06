@@ -16,6 +16,17 @@
             max-width: 100%;
             margin-bottom: 0;
         }
+
+        &.hero-animation {
+
+            .hero-section__card1 {
+                animation: move-up-down 2s ease infinite;
+            }
+            
+            .hero-section__card2 {
+                animation: move-down-up 2s ease infinite;
+            }
+        }
     }
     
     &__text-section {

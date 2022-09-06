@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // add class to element when it is visible on screen
+    // check if an element is visible on screen
     function isOnScreen(element) {
         const isOnScreen = element.getBoundingClientRect();
         return (
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     }
     
-    // if emoji are visible add animation
+    // if emoji is visible add animation
     const emojis = document.getElementsByClassName('testimonial__memoji');
     if (emojis) {
         window.addEventListener('scroll', () => {
@@ -58,4 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // add animation to hero section on mouseover
+    const heroSection = document.querySelector('.header-home__hero-section');
+    heroSection.addEventListener('mouseover', () => { heroSection.classList.add("hero-animation") });
+    heroSection.addEventListener('mouseleave', () => { heroSection.classList.remove("hero-animation") });
 });
