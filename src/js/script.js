@@ -36,4 +36,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // add class to element when it is visible on screen
+    function isOnScreen(element) {
+        const isOnScreen = element.getBoundingClientRect();
+        return (
+            isOnScreen.top >= 0 &&
+            isOnScreen.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
+    
+    // if emoji are visible add animation
+    const emojis = document.getElementsByClassName('testimonial__memoji');
+    if (emojis) {
+        window.addEventListener('scroll', () => {
+            Array.from(emojis).forEach(emoji => {
+                let animationClass = 'turn-right';
+                if (emoji.classList.contains('memoji__left')) animationClass = 'turn-left';
+
+                if (isOnScreen(emoji)) emoji.classList.add(animationClass);
+                else emoji.classList.remove(animationClass);
+            });
+        });
+    }
 });

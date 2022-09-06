@@ -1,9 +1,38 @@
+.appear {
+	animation: appear-element 2s;
+}
+
 @keyframes appear-element {
 	0% {
 		opacity: 0;
 	}
 	100% {
-        opacity: 1;
+		opacity: 1;
 	}
 }
 
+.turn-right {
+	animation: turn-right 1s;
+}
+
+@keyframes turn-right {
+	0% {
+		transform:rotate(0deg);
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}
+
+.turn-left {
+	animation: turn-left 1s;
+}
+
+@keyframes turn-left {
+	0% {
+		transform:rotate(0deg);
+	}
+	100% {
+		transform:rotate(-360deg);
+	}
+}
