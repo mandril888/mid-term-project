@@ -721,4 +721,35 @@ textarea {
   margin-top: 30px;
 }
 
+@media (min-width: 576px) {
+  .landing__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}
+.landing__info-title {
+  font-size: 2.4rem;
+}
+.landing__info-date {
+  font-size: 2rem;
+}
+.landing__banner {
+  height: 240px;
+  object-fit: cover;
+  margin: 40px 0;
+  box-shadow: 0 15px 80px -10px;
+}
+@media (min-width: 576px) {
+  .landing__banner {
+    height: 440px;
+  }
+}
+.landing__text {
+  margin-bottom: 25px;
+}
+.landing__text:last-child {
+  margin-bottom: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */
