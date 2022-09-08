@@ -61,6 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // add animation to hero section on mouseover
     const heroSection = document.querySelector('.header-home__hero-section');
-    heroSection.addEventListener('mouseover', () => { heroSection.classList.add("hero-animation") });
-    heroSection.addEventListener('mouseleave', () => { heroSection.classList.remove("hero-animation") });
+    if (heroSection) {
+        heroSection.addEventListener('mouseover', () => { heroSection.classList.add("hero-animation") });
+        heroSection.addEventListener('mouseleave', () => { heroSection.classList.remove("hero-animation") });
+    }
 });
