@@ -22,8 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const projectCard = `<div class="project-card">
                 <img class="project-card__img" src="${srcImgCard}" alt="${titleCard}">
                 <div class="project-card__container">
-                    <h3 class="project-card__title">${titleCard}</h3>
-                    <p class="project-card__text">${catCard}</p>
+                    <div class="project-card__container-top">    
+                        <h3 class="project-card__title">${titleCard}</h3>
+                        <p class="project-card__text">${catCard}</p>
+                    </div>
                     <a href="${linkCard}" class="project-card__link">Learn more</a>
                 </div>
             </div>`;

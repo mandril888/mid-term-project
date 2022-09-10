@@ -392,6 +392,22 @@ textarea {
 .project-card__container {
   padding: 0px 25px 30px;
 }
+@media (min-width: 769px) {
+  .project-card__container {
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.project-card__container-top {
+  margin-bottom: 70px;
+}
+@media (min-width: 769px) {
+  .project-card__container-top {
+    margin-bottom: 0;
+  }
+}
 .project-card__img {
   height: 240px;
   object-fit: cover;
@@ -404,9 +420,6 @@ textarea {
   .project-card__title {
     line-height: 4.5rem;
   }
-}
-.project-card__text {
-  margin-bottom: 70px;
 }
 
 .newsletter {
