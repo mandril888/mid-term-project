@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(data => {
                 if (data.paging.size) {
+                    document.querySelector('.loader__container').style.display = 'none';
                     setDataToProject(data, projectId);
                     setDataRelatedProjects(data, projectId);
                 }
