@@ -7,36 +7,53 @@ document.addEventListener('DOMContentLoaded', () => {
         return arrNums.sort((a, b) => 0.5 - Math.random());
     }
 
-    // get projects related data
-    function setDataRelatedProjects(data, projectId) {
+    // create project card HTML
+    function createProjectCardHtml(project) {
+        const srcImgCard = "/src/assets/projects-section/" + project.image;
+        const titleCard = project.name;
+        const catCard = project.categories.join(' & ');
+        const linkCard = "/projects.html?project=" + project.key;
+        return `<div class="project-card">
+            <img class="project-card__img" src="${srcImgCard}" alt="${titleCard}">
+            <div class="project-card__container">
+                <div class="project-card__container-top">    
+                    <h3 class="project-card__title">${titleCard}</h3>
+                    <p class="project-card__text">${catCard}</p>
+                </div>
+                <a href="${linkCard}" class="project-card__link">Learn more</a>
+            </div>
+        </div>`;
+    }
+
+    // set projects related data from a category project
+    function setProjectsRelated(data, projectId) {
         const categoryProject = data.items.filter(el => el.key === projectId)[0].categories;
         const relatedProjects = data.items.filter(el => el.categories.join('').includes(categoryProject[0]) && (el.key !== projectId));
         const projectsToShow = getRandomNumsArr(relatedProjects.length).slice(0,3);
         let htmlProjectContainer = '';
         
         projectsToShow.forEach(id => {
-            const srcImgCard = "/src/assets/projects-section/" + relatedProjects[id-1].image;
-            const titleCard = relatedProjects[id-1].name;
-            const catCard = relatedProjects[id-1].categories.join(' & ');
-            const linkCard = "/projects.html?project=" + relatedProjects[id-1].key;
-            const projectCard = `<div class="project-card">
-                <img class="project-card__img" src="${srcImgCard}" alt="${titleCard}">
-                <div class="project-card__container">
-                    <div class="project-card__container-top">    
-                        <h3 class="project-card__title">${titleCard}</h3>
-                        <p class="project-card__text">${catCard}</p>
-                    </div>
-                    <a href="${linkCard}" class="project-card__link">Learn more</a>
-                </div>
-            </div>`;
-            htmlProjectContainer += projectCard;
+            htmlProjectContainer += createProjectCardHtml(relatedProjects[id-1]);
         });
         
         const projectContainer = document.querySelector('.projects__container');
         projectContainer.innerHTML = htmlProjectContainer;
     }
 
-    // set data form Deta to DOM
+    // set last projects data
+    function setLastProjects(data) {
+        const projectsToShow = data.items.slice(-3);
+        let htmlProjectContainer = '';
+        
+        projectsToShow.forEach(project => {
+            htmlProjectContainer += createProjectCardHtml(project);
+        });
+        
+        const projectContainer = document.querySelector('.projects__container');
+        projectContainer.innerHTML = htmlProjectContainer;
+    }
+
+    // set data of a project to template
     function setDataToProject(data, projectId) {
         const dataReceived = (projectId) ? data.items.filter(el => el.key === projectId)[0] : data.items[0];
         const landingTitle = document.querySelector('.landing__title');
@@ -61,34 +78,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // get projects data from Deta endpoint
-    function getProjectsData(projectId) {
-        const url = 'https://database.deta.sh/v1/a0wwnrex/projects/query'; 
-        const body = { query: [{}] };
-        const fetchParams = {
-            method: 'POST',
-            headers: {
-                "Accept": 'application/json',
-                "Content-Type": 'application/json',
-                "X-API-Key": 'a0wwnrex_JeRhBybn5iFYziStv9d2M6Mchd2b4B4H'
-            },
-            body: JSON.stringify(body)
-        };
-    
-        fetch(url, fetchParams)
-            .then(response => response.json())
-            .then(data => {
-                if (data.paging.size) {
-                    document.querySelector('.loader__container').style.display = 'none';
-                    setDataToProject(data, projectId);
-                    setDataRelatedProjects(data, projectId);
-                }
-            })
+    function getProjectsData() {
+        return new Promise((resolve, reject) => {
+            const url = 'https://database.deta.sh/v1/a0wwnrex/projects/query'; 
+            const body = { query: [{}] };
+            const fetchParams = {
+                method: 'POST',
+                headers: {
+                    "Accept": 'application/json',
+                    "Content-Type": 'application/json',
+                    "X-API-Key": 'a0wwnrex_JeRhBybn5iFYziStv9d2M6Mchd2b4B4H'
+                },
+                body: JSON.stringify(body)
+            };
+        
+            fetch(url, fetchParams)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.paging.size) resolve(data);
+                    else reject('Error')
+                })
+        });
     }
 
+    // get guery url parameters
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
-    let projectQueryId = params.project;
-    
-    getProjectsData(projectQueryId);
+
+    // get project id from query url and then fill all data
+    const projectQueryId = params.project;
+    if (projectQueryId) {
+        getProjectsData()
+            .then(data => {
+                document.querySelector('.loader__container').style.display = 'none';
+                setDataToProject(data, projectQueryId);
+                setProjectsRelated(data, projectQueryId);
+            })
+    }
+
+    // if exists recent project block fill all data
+    const recentProjects = document.getElementById('recent-projects');
+    if (recentProjects) {
+        getProjectsData()
+            .then(data => {
+                document.querySelector('.loader__container').style.display = 'none';
+                setLastProjects(data);
+            })
+    }
 });

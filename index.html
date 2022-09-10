@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="/src/css/style.css"></link>
   </head>
   <body>
+    <div class="loader__container">
+        <div class="loader">
+            <div class="inner one"></div>
+            <div class="inner two"></div>
+            <div class="inner three"></div>
+        </div>
+    </div>
     <div class="navbar">
         <div class="navbar__container">
             <div class="navbar__logo">
@@ -58,38 +65,7 @@
         </section>
         <section id="projects" class="projects">
             <h2>Recent Projects</h2>
-            <div class="projects__container">
-                <div class="project-card">
-                    <img class="project-card__img" src="/src/assets/projects-section/1.jpg" alt="Simplify">
-                    <div class="project-card__container">
-                        <div class="project-card__container-top">
-                            <h3 class="project-card__title">Simplify</h3>
-                            <p class="project-card__text">UI Design & App Development</p>
-                        </div>
-                        <a href="/projects.html?project=t2jdfma29w2j" class="project-card__link">Learn more</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img class="project-card__img" src="/src/assets/projects-section/2.jpg" alt="Dashcoin">
-                    <div class="project-card__container">
-                        <div class="project-card__container-top">
-                            <h3 class="project-card__title">Dashcoin</h3>
-                            <p class="project-card__text">Web Development</p>
-                        </div>
-                        <a href="/projects.html?project=rxnkftlbmx4z" class="project-card__link">Learn more</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img class="project-card__img" src="/src/assets/projects-section/3.jpg" alt="Vectorify">
-                    <div class="project-card__container">
-                        <div class="project-card__container-top">
-                            <h3 class="project-card__title">Vectorify</h3>
-                            <p class="project-card__text">User Experience Design</p>
-                        </div>
-                        <a href="/projects.html?project=0nweifg5965u" class="project-card__link">Learn more</a>
-                    </div>
-                </div>
-            </div>
+            <div id="recent-projects" class="projects__container"></div>
         </section>
     </div>
     <section class="testimonial">
@@ -165,5 +141,6 @@
         </div>
     </footer>
     <script src="/src/js/script.js"></script>
+    <script src="/src/js/projects.js"></script>
   </body>
 </html>
