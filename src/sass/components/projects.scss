@@ -38,11 +38,11 @@
     }
     
     &__title {
-        margin-bottom: 0;
-        line-height: 4rem;
+        margin: 25px 0 10px;
+        line-height: 3rem;
         
         @media (min-width: $screen-md) {
-            line-height: 6rem;
+            line-height: 4.5rem;
         }
     }
 

@@ -397,12 +397,12 @@ textarea {
   object-fit: cover;
 }
 .project-card__title {
-  margin-bottom: 0;
-  line-height: 4rem;
+  margin: 25px 0 10px;
+  line-height: 3rem;
 }
 @media (min-width: 769px) {
   .project-card__title {
-    line-height: 6rem;
+    line-height: 4.5rem;
   }
 }
 .project-card__text {

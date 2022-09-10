@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         landingInfoTitle.innerHTML = dataReceived.categories.join(' & ');
         landingInfoDate.innerHTML = `Completed on ${monthCapitaliced} ${day}, ${year}`;
         landingBanner.src = "/src/assets/projects-section/" + dataReceived.image;
+        landingBanner.alt = dataReceived.name;
         landingText.innerHTML = dataReceived.description.join('<br><br>');
     }
 
