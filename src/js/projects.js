@@ -40,29 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         projectContainer.innerHTML = htmlProjectContainer;
     }
 
-    // activate Owl carrousel in all resolutions
-    function activateOwlCarrouselAllResolutions() {
-        const carrouselContainers = document.querySelectorAll('.add-carrousel');
-        [].forEach.call(carrouselContainers, carrouselContainer => {
-            carrouselContainer.innerHTML = `<div class="owl-carousel owl-theme">
-                                                ${carrouselContainer.innerHTML}
-                                            </div>`;
-            $(document).ready(() => $(".add-carrousel .owl-carousel").owlCarousel({
-                items:1,
-                responsive : {
-                    768 : {
-                        items : 3
-                    }
-                },
-                loop:true,
-                margin:20,
-                autoplay:true,
-                autoplayTimeout:3000,
-                autoplayHoverPause:true
-            }));
-        });
-    }
-
     // set last projects data
     function setLastProjects(data) {
         const projectsToShow = data.items;
@@ -74,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const projectContainer = document.querySelector('.projects__container');
         projectContainer.innerHTML = htmlProjectContainer;
-        activateOwlCarrouselAllResolutions();
     }
 
     // set data of a project to template

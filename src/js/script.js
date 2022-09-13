@@ -98,9 +98,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // activate or remove Owl carrousel mobile
+    // activate Owl carrousel in all resolutions
+    function activateOwlCarrouselAllResolutions() {
+        const carrouselContainers = document.querySelectorAll('.add-carrousel');
+        [].forEach.call(carrouselContainers, carrouselContainer => {
+            carrouselContainer.innerHTML = `<div class="owl-carousel owl-theme">
+                                                ${carrouselContainer.innerHTML}
+                                            </div>`;
+            $(document).ready(() => $(".add-carrousel .owl-carousel").owlCarousel({
+                items:1,
+                responsive : {
+                    768 : {
+                        items : 3
+                    }
+                },
+                loop:true,
+                margin:20,
+                autoplay:true,
+                autoplayTimeout:3000,
+                autoplayHoverPause:true
+            }));
+        });
+    }
+
+    // activate or remove Owl carrousel mobile & activate Owl carrousel desktop
     let carrouselActive = false;
-    if (window.innerWidth < 769) activateOwlCarrouselMobile();
+    setTimeout(() => {
+        activateOwlCarrouselAllResolutions();
+        if (window.innerWidth < 769) activateOwlCarrouselMobile();
+    }, 1000)
     window.addEventListener('resize', () => {
         if (window.innerWidth < 769 && !carrouselActive) activateOwlCarrouselMobile();
         if (window.innerWidth > 768 && carrouselActive) removeOwlCarrouselDesktop();
