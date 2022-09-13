@@ -65,4 +65,44 @@ document.addEventListener('DOMContentLoaded', () => {
         heroSection.addEventListener('mouseover', () => { heroSection.classList.add("hero-animation") });
         heroSection.addEventListener('mouseleave', () => { heroSection.classList.remove("hero-animation") });
     }
+
+    // activate Owl carrousel in mobile
+    function activateOwlCarrouselMobile() {
+        carrouselActive = true;
+        const carrouselContainers = document.querySelectorAll('.add-carrousel-mobile');
+        [].forEach.call(carrouselContainers, carrouselContainer => {
+            carrouselContainer.innerHTML = `<div class="owl-carousel owl-theme">
+                                                ${carrouselContainer.innerHTML}
+                                            </div>
+                                            <div class="remove-carrousel-desktop" style="display:none">
+                                                ${carrouselContainer.innerHTML}
+                                            </div>`;
+            $(document).ready(() => $(".owl-carousel").owlCarousel({
+                items:1,
+                loop:true,
+                margin:20,
+                autoplay:true,
+                autoplayTimeout:3000,
+                autoplayHoverPause:true
+            }));
+        });
+    }
+
+    // remove Owl carrousel in mobile
+    function removeOwlCarrouselMobile() {
+        carrouselActive = false;
+        const carrouselContainers = document.querySelectorAll('.add-carrousel-mobile');
+        const carrouselContainersCopy = document.querySelectorAll('.remove-carrousel-desktop');
+        for (let i=0; i<carrouselContainers.length; i++) {
+            carrouselContainers[i].innerHTML = carrouselContainersCopy[i].innerHTML;
+        }
+    }
+
+    // activate or remove Owl carrousel
+    let carrouselActive = false;
+    if (window.innerWidth < 769) activateOwlCarrouselMobile();
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 769 && !carrouselActive) activateOwlCarrouselMobile();
+        if (window.innerWidth > 768 && carrouselActive) removeOwlCarrouselMobile();
+    });
 });

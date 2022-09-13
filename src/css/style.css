@@ -253,17 +253,19 @@ textarea {
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }
-
 .alert-success {
   color: #155724;
   background-color: #d4edda;
   border-color: #c3e6cb;
 }
-
 .alert-danger {
   color: #721c24;
   background-color: #f8d7da;
   border-color: #f5c6cb;
+}
+
+.owl-stage {
+  padding-top: 14px;
 }
 
 .navbar {
@@ -632,7 +634,7 @@ textarea {
 @media (min-width: 769px) {
   .header-home__hero-section {
     max-width: 100%;
-    margin-bottom: 0;
+    margin: auto;
   }
 }
 .header-home__hero-section.hero-animation .hero-section__card1 {
