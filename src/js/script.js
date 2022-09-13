@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                             <div class="remove-carrousel-desktop" style="display:none">
                                                 ${carrouselContainer.innerHTML}
                                             </div>`;
-            $(document).ready(() => $(".owl-carousel").owlCarousel({
+            $(document).ready(() => $(".add-carrousel-mobile .owl-carousel").owlCarousel({
                 items:1,
                 loop:true,
                 margin:20,
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // remove Owl carrousel in mobile
-    function removeOwlCarrouselMobile() {
+    function removeOwlCarrouselDesktop() {
         carrouselActive = false;
         const carrouselContainers = document.querySelectorAll('.add-carrousel-mobile');
         const carrouselContainersCopy = document.querySelectorAll('.remove-carrousel-desktop');
@@ -98,11 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // activate or remove Owl carrousel
+    // activate or remove Owl carrousel mobile
     let carrouselActive = false;
     if (window.innerWidth < 769) activateOwlCarrouselMobile();
     window.addEventListener('resize', () => {
         if (window.innerWidth < 769 && !carrouselActive) activateOwlCarrouselMobile();
-        if (window.innerWidth > 768 && carrouselActive) removeOwlCarrouselMobile();
+        if (window.innerWidth > 768 && carrouselActive) removeOwlCarrouselDesktop();
     });
 });
